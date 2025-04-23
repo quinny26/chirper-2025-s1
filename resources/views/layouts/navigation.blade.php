@@ -20,20 +20,24 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        <i class="fa-solid fa-home mr-1"></i>
                         {{ __('Home') }}
                     </x-nav-link>
 
                     @auth
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            <i class="fa-solid fa-laptop mr-1"></i>
                             {{ __('Dashboard') }}
                         </x-nav-link>
 
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('other.*')">
+                            <i class="fa-solid fa-link mr-1"></i>
                             {{ __('Other Links') }} ({{ __('Authenticated') }})
                         </x-nav-link>
 
                     @else
                         <x-nav-link :href="route('home')" :active="request()->routeIs('other.*')">
+                            <i class="fa-solid fa-link mr-1"></i>
                             {{ __('Other Links') }} ({{ __('Unauthenticated') }})
                         </x-nav-link>
                     @endauth
@@ -43,10 +47,11 @@
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6 space-x-4">
                 @auth
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
+                    <x-dropdown align="right" width="48">
+                        <x-slot name="trigger">
                             <button
                                 class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                <i class="fa-solid fa-user mr-1"></i>
                                 <div>{{ Auth::user()->name }}</div>
 
                                 <div class="ms-1">
@@ -58,39 +63,43 @@
                                     </svg>
                                 </div>
                             </button>
-                    </x-slot>
+                        </x-slot>
 
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('logout')"
-                                             onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                        <x-slot name="content">
+                            <x-dropdown-link :href="route('profile.edit')">
+                                <i class="fa-solid fa-user-edit mr-1"></i>
+                                {{ __('Profile') }}
                             </x-dropdown-link>
-                        </form>
-                    </x-slot>
-                </x-dropdown>
+
+                            <!-- Authentication -->
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <x-dropdown-link :href="route('logout')"
+                                                 onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                    <i class="fa-solid fa-door-closed mr-1"></i>
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form>
+                        </x-slot>
+                    </x-dropdown>
 
                 @else
 
                     <a href="{{ route('login') }}"
                        class="inline-block px-5 py-1.5 dark:text-gray-200 text-gray-400 border border-transparent hover:border-gray-500 dark:hover:border-gray-400 rounded-sm text-sm leading-normal"
                     >
-                        Log in
+                        <i class="fa-solid fa-door-open mr-1"></i>
+                        {{ __("Log in") }}
                     </a>
 
                     @if (Route::has('register'))
                         <a
                             href="{{ route('register') }}"
                             class="inline-block px-5 py-1.5 dark:text-gray-200 border-gray-300 hover:border-gray-500 border text-gray-400 dark:border-gray-400 dark:hover:border-gray-400 rounded-sm text-sm leading-normal">
-                            Register
+                            <i class="fa-solid fa-id-card mr-1"></i>
+                            {{ __("Register") }}
                         </a>
                     @endif
 
@@ -117,36 +126,43 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden bg-gray-200">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                <i class="fa-solid fa-home mr-1"></i>
                 {{ __('Home') }}
             </x-responsive-nav-link>
 
             @auth
                 <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <i class="fa-solid fa-laptop mr-1"></i>
                     {{ __('Dashboard') }}
                 </x-responsive-nav-link>
 
                 <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('other.*')">
+                    <i class="fa-solid fa-link mr-1"></i>
                     {{ __('Other Links') }} ({{ __('Authenticated') }})
                 </x-responsive-nav-link>
 
             @else
 
                 <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('other.*')">
+                    <i class="fa-solid fa-link mr-1"></i>
                     {{ __('Other Links') }} ({{ __('Unauthenticated') }})
                 </x-responsive-nav-link>
 
                 <x-responsive-nav-link :href="route('login')" :active="request()->routeIs('login')">
+                    <i class="fa-solid fa-door-open mr-1"></i>
                     Log in
                 </x-responsive-nav-link>
 
                 @if (Route::has('register'))
                     <x-responsive-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                        <i class="fa-solid fa-id-card mr-1"></i>
                         Register
                     </x-responsive-nav-link>
                 @endif
             @endauth
 
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('other.*')">
+                <i class="fa-solid fa-link mr-1"></i>
                 {{ __('Other Links') }} ({{ __('General') }})
             </x-responsive-nav-link>
         </div>
@@ -161,6 +177,7 @@
 
                 <div class="mt-3 space-y-1">
                     <x-responsive-nav-link :href="route('profile.edit')">
+                        <i class="fa-solid fa-user-edit mr-1"></i>
                         {{ __('Profile') }}
                     </x-responsive-nav-link>
 
@@ -171,6 +188,7 @@
                         <x-responsive-nav-link :href="route('logout')"
                                                onclick="event.preventDefault();
                                         this.closest('form').submit();">
+                            <i class="fa-solid fa-door-closed mr-1"></i>
                             {{ __('Log Out') }}
                         </x-responsive-nav-link>
                     </form>

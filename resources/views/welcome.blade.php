@@ -23,12 +23,34 @@
                     <h3 class="text-xl">Starter Template Includes:</h3>
                     <ul class="list-disc ml-8">
                         <li>Blade Templates circa Laravel 11</li>
-                        <li>Sanctum authentication</li>
-                        <li>Email Verification enabled</li>
                         <li>Navigation bar on guest and app layouts</li>
                         <li>Footer in guest and app layouts</li>
-                        <li>Laravel Debug Bar (<a href="https://laraveldebugbar.com">LaravelDebugBar.Com</a>)</li>
-                        <li>Laravel Telescope</li>
+                        <li>Sample Users (Admin - Validated, Staff &amp; Client - not validated)</li>
+                        <li><a href="https://laravel.com/docs/sanctum"
+                               class="text-blue-700 underline underline-offset-3">
+                                Sanctum authentication</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i></li>
+                        <li>Email Verification enabled</li>
+                        <li><a href="https://laraveldebugbar.com"
+                               class="text-blue-700 underline underline-offset-3">
+                                Laravel Debug Bar</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i></li>
+
+                        <li><a href="https://laravel.com/docs/telescope"
+                               class="text-blue-700 underline underline-offset-3">
+                                Laravel Telescope</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i></li>
+
+                        <li><a href="https://livewire.laravel.com"
+                               class="text-blue-700 underline underline-offset-3">
+                                Laravel Livewire</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i></li>
+
+                        <li><a href="https://fontawesom.com"
+                               class="text-blue-700 underline underline-offset-3">
+                                Font Awesome 6 (Free)</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i></li>
+
                     </ul>
                 </div>
 
@@ -36,10 +58,24 @@
                     <h3 class="text-xl">Template Development</h3>
                     <dl class="">
                         <dt>Adrian Gould</dt>
-                        <dd>Lecturer (ASL1), <a href="https://northmetrotafe.wa.edu.au" class="text-red-700">North Metropolitan TAFE</a>, Perth WA</dd>
-                        <dd>GitHub Pages: <a href="https://adygcode.github.io" class="text-blue-700">https://adygcode.github.io</a></dd>
-                        <dd>GitHub Repos: <a href="https://github.com/AdyGCode" class="text-blue-700">https://github.com/AdyGCode</a></dd>
-                        <dd>Starter KLit Repo: <a href="https://github.com/AdyGCode/retro-blade-kit" class="text-blue-700">Retro Blade Starter Kit</a></dd>
+                        <dd>Lecturer (ASL1), <a href="https://northmetrotafe.wa.edu.au"
+                                                class="text-red-700 underline underline-offset-3">
+                                North Metropolitan TAFE</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i>,
+                            Perth WA, Australia
+                        </dd>
+                        <dd>GitHub Pages: <a href="https://adygcode.github.io"
+                                             class="text-blue-700 underline underline-offset-3">
+                                https://adygcode.github.io</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i></dd>
+                        <dd>GitHub Repos: <a href="https://github.com/AdyGCode"
+                                             class="text-blue-700 underline underline-offset-3">
+                                https://github.com/AdyGCode</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i></dd>
+                        <dd>Starter Kit Repo: <a href="https://github.com/AdyGCode/retro-blade-kit"
+                                                 class="text-blue-700 underline underline-offset-3">
+                                Retro Blade Starter Kit</a>
+                            <i class="fa-solid fa-up-right-from-square text-gray-300 text-xs"></i></dd>
                     </dl>
                 </div>
             </div>
